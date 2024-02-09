@@ -1845,13 +1845,13 @@ footer .box.one p {
 }
 footer .box.two {
   padding-left: 20px;
+  margin-top: 15px;
 }
 footer .box.two .link {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: space-around;
-  margin-top: 15px;
 }
 footer .box.two .link a {
   margin-bottom: 20px;
@@ -1920,6 +1920,10 @@ footer .box.four {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
   gap: 10px;
+  justify-content: center !important;
+  justify-items: center !important;
+  place-content: center !important;
+  place-items: center !important;
 }
 footer img {
   max-width: 100%;
@@ -1989,13 +1993,14 @@ footer .finaleee hr {
     padding-left: 0;
   }
   footer .box.four .gary {
-    text-align: center;
-    margin: 0 auto;
+    text-align: center !important;
+    margin: 0 auto !important;
   }
   footer .box.four .gary img:last-child {
-    text-align: center;
-    margin: 0 auto;
-    justify-items: centers;
+    place-self: center !important;
   }
 }
 /* End Footer */
+.none {
+  display: none !important;
+}

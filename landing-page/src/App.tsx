@@ -13,6 +13,8 @@ import Services from "./components/views/Services";
 import TeamMembers from "./components/views/TeamMembers";
 import Testimonials from "./components/views/Testimonials";
 import TopVideo from "./components/views/TopVideo";
+import Request from "./components/views/Request";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <Plans />
       <TopVideo />
       <OurStats />
+      <Request />
+      <Footer />
     </div>
   );
 }

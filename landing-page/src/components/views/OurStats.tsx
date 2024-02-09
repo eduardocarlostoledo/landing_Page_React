@@ -40,30 +40,3 @@ function OurStats() {
 }
 
 export default OurStats;
-
-/*
-let count = document.querySelectorAll(".stats h3");
-let statsSection = document.querySelector(".stats");
-let started = false;
-window.onscroll = function () {
-  if (window.scrollY >= statsSection.offsetTop) {
-    if (!started) {
-      count.forEach((num) => {
-        Start(num);
-      });
-      started = true;
-    }
-  }
-};
-function Start(e) {
-  let goal = e.dataset.goal;
-  console.log(goal);
-  let counter = setInterval(() => {
-    e.textContent++;
-    if (e.textContent == goal) {
-      clearInterval(counter);
-    }
-  }, 2000 / goal);
-}
-
-*/

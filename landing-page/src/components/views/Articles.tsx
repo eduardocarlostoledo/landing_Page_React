@@ -3,42 +3,42 @@ const articles = [
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-01.jpg",
+    photo: "images/cat-01.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-02.jpg",
+    photo: "images/cat-02.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-03.jpg",
+    photo: "images/cat-03.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-04.jpg",
+    photo: "images/cat-04.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-05.jpg",
+    photo: "images/cat-05.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-06.jpg",
+    photo: "images/cat-06.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-07.jpg",
+    photo: "images/cat-07.jpg",
   },
   {
     title: "Test Title",
     body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit,deserunt repellendus.",
-    photo: "../../../public/images/cat-08.jpg",
+    photo: "images/cat-08.jpg",
   },
 ];
 function Articles() {
