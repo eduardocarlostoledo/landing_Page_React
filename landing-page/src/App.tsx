@@ -5,10 +5,14 @@ import Features from "./components/views/Features";
 import Gallery from "./components/views/Gallery";
 import HeroSection from "./components/views/HeroSection";
 import LatestEvents from "./components/views/LatestEvents";
+import OurSkills from "./components/views/OurSkills";
+import OurStats from "./components/views/OurStats";
 import OurWorks from "./components/views/OurWorks";
+import Plans from "./components/views/Plans";
 import Services from "./components/views/Services";
 import TeamMembers from "./components/views/TeamMembers";
 import Testimonials from "./components/views/Testimonials";
+import TopVideo from "./components/views/TopVideo";
 
 function App() {
   return (
@@ -21,8 +25,12 @@ function App() {
       <Testimonials />
       <TeamMembers />
       <Services />
+      <OurSkills />
       <OurWorks />
       <LatestEvents />
+      <Plans />
+      <TopVideo />
+      <OurStats />
     </div>
   );
 }
