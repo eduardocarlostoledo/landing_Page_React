@@ -291,22 +291,22 @@ export const videoDetails = [
 export const ourStats = [
   {
     title: "Clients",
-    Statistics: "150",
+    Statistics: 150,
     icon: "far fa-user fa-2x fa-fw",
   },
   {
     title: "Countries",
-    Statistics: "300",
+    Statistics: 300,
     icon: "fas fa-code fa-2x fa-fw",
   },
   {
     title: "Projects",
-    Statistics: "50",
+    Statistics: 50,
     icon: "fas fa-globe-asia fa-2x fa-fw",
   },
   {
     title: "Money",
-    Statistics: "500",
+    Statistics: 500,
     icon: "far fa-money-bill-alt fa-2x fa-fw",
   },
 ];

@@ -1,7 +1,9 @@
 import { ourStats } from "../../constants";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 export const OurStats = () => {
+  console.log(window.scrollY);
   return (
     <div className="stats" id="stats">
       <div className="header2">
@@ -23,7 +25,24 @@ export const OurStats = () => {
             key={index}
           >
             <i className={el.icon}></i>
-            <h3 data-goal="150">{el.Statistics}</h3>
+            <motion.h3
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 1,
+                repeatType: "reverse",
+                repeatDelay: 1,
+              }}
+            >
+              <CountUp
+                start={0}
+                end={el.Statistics}
+                duration={0.9}
+                useEasing={false}
+                enableScrollSpy
+                preserveValue
+              ></CountUp>
+            </motion.h3>
             <p>{el.title}</p>
           </motion.div>
         ))}

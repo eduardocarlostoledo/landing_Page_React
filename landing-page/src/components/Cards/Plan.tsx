@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Plan } from "../../types";
-
+import CountUp from "react-countup";
 export const PlanCard = ({
   typeSupport,
   icon,
@@ -17,7 +17,17 @@ export const PlanCard = ({
     >
       <h2>{typeSupport}</h2>
       <img src={icon} alt="" />
-      <h3>${price}</h3>
+      <h3>
+        <CountUp
+          start={0}
+          end={price}
+          duration={0.5}
+          useEasing={false}
+          preserveValue
+          prefix="$"
+          enableScrollSpy
+        ></CountUp>
+      </h3>
       <p>Per {duration}</p>
       <ul className="list">
         <li>{details.hdd} HDD Space</li>
