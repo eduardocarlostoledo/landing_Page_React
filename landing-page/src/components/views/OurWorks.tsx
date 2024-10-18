@@ -1,23 +1,7 @@
-import OurWork from "../Cards/OurWork";
+import { OurWork } from "../Cards/OurWork";
+import { ourWorks } from "../../constants";
 
-const ourWorks = [
-  {
-    title: "Business Analysis",
-    body: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel",
-    src: "images/work-steps.png",
-  },
-  {
-    title: "Architecture",
-    body: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel",
-    src: "images/work-steps-2.png",
-  },
-  {
-    title: "Developement",
-    body: " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel",
-    src: "images/work-steps-3.png",
-  },
-];
-function OurWorks() {
+export const OurWorks = () => {
   return (
     <div className="how" id="how">
       <h2 className="main-title">How It Works ?</h2>
@@ -27,12 +11,10 @@ function OurWorks() {
         </div>
         <div className="boxs">
           {ourWorks.map((el, index) => (
-            <OurWork props={el} key={index} />
+            <OurWork title={el.title} body={el.body} src={el.src} key={index} />
           ))}
         </div>
       </div>
     </div>
   );
-}
-
-export default OurWorks;
+};

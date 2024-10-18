@@ -1,23 +1,7 @@
-import Progress from "../Progress";
-const skills = [
-  {
-    title: "HTML",
-    level: "60%",
-  },
-  {
-    title: "CSS",
-    level: "90%",
-  },
-  {
-    title: "JavaScript",
-    level: "70%",
-  },
-  {
-    title: "Python",
-    level: "80%",
-  },
-];
-function OurSkills() {
+import { Progress } from "../Progress";
+import { skills } from "../../constants";
+
+export const OurSkills = () => {
   return (
     <div className="our-skills" id="skill">
       <h2 className="main-title">Our Skills</h2>
@@ -27,12 +11,10 @@ function OurSkills() {
         </div>
         <div className="skills">
           {skills.map((sk, index) => (
-            <Progress skill={sk} key={index} />
+            <Progress title={sk.title} level={sk.level} key={index} />
           ))}
         </div>
       </div>
     </div>
   );
-}
-
-export default OurSkills;
+};

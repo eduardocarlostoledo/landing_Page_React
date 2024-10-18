@@ -1,13 +1,13 @@
-function OurWork({ props }) {
+import { Work } from "../../types";
+
+export const OurWork = ({ title, body, src }: Work) => {
   return (
     <div className="box">
-      <img src={props.src} alt="" />
+      <img src={src} alt="" />
       <div className="text">
-        <h3>{props.title}</h3>
-        <p>{props.body}</p>
+        <h3>{title}</h3>
+        <p>{body}</p>
       </div>
     </div>
   );
-}
-
-export default OurWork;
+};

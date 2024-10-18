@@ -1,10 +1,10 @@
-function VideoDetails({ details }) {
+import { VideoDetail } from "../types";
+
+export const VideoDetails = ({ title, minute }: VideoDetail) => {
   return (
     <div className="main">
-      <p>{details.title}</p>
-      <p>{details.minute}</p>
+      <p>{title}</p>
+      <p>{minute}</p>
     </div>
   );
-}
-
-export default VideoDetails;
+};

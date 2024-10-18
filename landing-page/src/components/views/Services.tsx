@@ -1,14 +1,7 @@
-import Service from "../Cards/Service";
+import { Service } from "../Cards/Service";
+import { services } from "../../constants";
 
-const services = [
-  "Security",
-  "Fixing Issues",
-  "Location",
-  "Coding",
-  "Security",
-  "Marketing",
-];
-function Services() {
+export const Services = () => {
   return (
     <div className="services" id="services">
       <h2 className="main-title">Services</h2>
@@ -19,6 +12,4 @@ function Services() {
       </div>
     </div>
   );
-}
-
-export default Services;
+};

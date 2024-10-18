@@ -1,6 +1,10 @@
-import MegaMenu from "./MegaMenu";
-
-function NavLink({ showicon, link, icon }) {
+import { MegaMenu } from "./MegaMenu";
+type props = {
+  showicon?: boolean;
+  link: string;
+  icon?: string;
+};
+export const NavLink = ({ showicon, link, icon }: props) => {
   return (
     <li
       className={link == "Other Links" ? "show" : ""}
@@ -12,6 +16,4 @@ function NavLink({ showicon, link, icon }) {
       {link == "Other Links" ? <MegaMenu /> : ""}
     </li>
   );
-}
-
-export default NavLink;
+};

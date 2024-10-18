@@ -1,6 +1,8 @@
-import NavLink from "./views/NavLink";
+import { NavLink } from "./views/NavLink";
+
 const links = ["Article", "Gallery", "Features", "Other Links"];
-function NavBar() {
+
+export const NavBar = () => {
   return (
     <div className="header" id="header">
       <div className="container">
@@ -13,6 +15,4 @@ function NavBar() {
       </div>
     </div>
   );
-}
-
-export default NavBar;
+};

@@ -1,4 +1,4 @@
-function HeroSection() {
+export const HeroSection = () => {
   return (
     <div className="hero-section">
       <div className="container">
@@ -10,7 +10,7 @@ function HeroSection() {
           </p>
         </div>
         <div className="image">
-          <img src="images/landing-image.png" alt="" />
+          <img src="images/landing-image.png" alt="hero_section_image" />
         </div>
       </div>
       <a href="#article" className="go-down">
@@ -18,6 +18,4 @@ function HeroSection() {
       </a>
     </div>
   );
-}
-
-export default HeroSection;
+};

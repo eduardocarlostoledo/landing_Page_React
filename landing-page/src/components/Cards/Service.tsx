@@ -1,4 +1,7 @@
-function Service({ title }) {
+type serviceTitle = {
+  title: string;
+};
+export const Service = ({ title }: serviceTitle) => {
   return (
     <div className="box">
       <i className="fas fa-user-shield fa-4x"></i>
@@ -8,6 +11,4 @@ function Service({ title }) {
       </div>
     </div>
   );
-}
-
-export default Service;
+};

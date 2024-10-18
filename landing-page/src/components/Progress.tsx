@@ -1,14 +1,17 @@
-function Progress({ skill }) {
+type Skill = {
+  title: string;
+  level: string;
+};
+
+export const Progress = ({ title, level }: Skill) => {
   return (
     <div className="skill">
       <h3>
-        {skill.title} <span className="num">{skill.level}</span>
+        {title} <span className="num">{level}</span>
       </h3>
       <div className="the-progres">
-        <span style={{ width: skill.level }}> </span>
+        <span style={{ width: level }}> </span>
       </div>
     </div>
   );
-}
-
-export default Progress;
+};

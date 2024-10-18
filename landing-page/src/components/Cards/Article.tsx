@@ -1,10 +1,12 @@
-function Article({ article }) {
+import { type Article } from "../../types";
+
+export const ArticleCard = ({ title, photo, body }: Article) => {
   return (
     <div className="box">
-      <img src={article.photo} alt="" />
+      <img src={photo} alt="" />
       <div className="content">
-        <h3>{article.title}</h3>
-        <p>{article.body}</p>
+        <h3>{title}</h3>
+        <p>{body}</p>
       </div>
       <div className="info">
         <a href="#">Read More</a>
@@ -12,6 +14,4 @@ function Article({ article }) {
       </div>
     </div>
   );
-}
-
-export default Article;
+};

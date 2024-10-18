@@ -1,20 +1,9 @@
+import { contactUs } from "../constants";
+
 const icons = ["facebook", "twitter", "youtube"];
 const numbers = [1, 2, 3, 4, 5];
-const boxs = [
-  {
-    icon: "fas fa-map-marker-alt fa-fw",
-    text: "Egypt, Giza, Inside The Sphinx, Room Number 220",
-  },
-  {
-    icon: "fas fa-map-marker-alt fa-fw",
-    text: "Egypt, Giza, Inside The Sphinx, Room Number 220",
-  },
-  {
-    icon: "fas fa-map-marker-alt fa-fw",
-    text: "Egypt, Giza, Inside The Sphinx, Room Number 220",
-  },
-];
-function Footer() {
+
+export const Footer = () => {
   return (
     <footer>
       <div className="container">
@@ -43,19 +32,23 @@ function Footer() {
           </div>
         </div>
         <div className="box three">
-          <div className="text">
-            <i className="fas fa-map-marker-alt fa-fw"></i>
-            <p>Egypt, Giza, Inside The Sphinx, Room Number 220</p>
-          </div>
-          <div className="text">
+          {contactUs.map((el) => {
+            return (
+              <div className="text">
+                <i className={el.icon}></i>
+                <p>{el.text}</p>
+              </div>
+            );
+          })}
+          {/* <div className="text">
             <i className="far fa-clock fa-fw"> </i>
             <p>Business Hours: From 10:00 To 18:00</p>
           </div>
           <div className="text">
             <i className="fas fa-phone-volume fa-fw"></i>
-            <p>+0956672491</p>
-            <p>0956672491</p>
-          </div>
+            <p>+72459716506</p>
+            <p>956425374</p>
+          </div> */}
         </div>
         <div className="box four">
           <div className="gary">
@@ -74,6 +67,4 @@ function Footer() {
       </div>
     </footer>
   );
-}
-
-export default Footer;
+};

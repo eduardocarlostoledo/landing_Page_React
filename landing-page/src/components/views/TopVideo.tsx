@@ -1,36 +1,7 @@
-import VideoDetails from "../VideoDetails";
+import { VideoDetails } from "../VideoDetails";
+import { videoDetails } from "../../constants";
 
-const details = [
-  {
-    title: "How To Create Sub Domain",
-    minute: "05:18",
-  },
-  {
-    title: "Playing With The DNS",
-    minute: "03:18",
-  },
-  {
-    title: "Everything About The Virtual Hosts",
-    minute: "05:18",
-  },
-  {
-    title: "How To Monitor Your Website",
-    minute: "05:25",
-  },
-  {
-    title: "Uncharted Beating The Last Boss",
-    minute: "07:48",
-  },
-  {
-    title: "Ys Oath In Felghana Overview",
-    minute: "8:18",
-  },
-  {
-    title: "Ys Series All Games Ending",
-    minute: "10:40",
-  },
-];
-function TopVideo() {
+export const TopVideo = () => {
   return (
     <div className="top-video" id="video">
       <h2 className="main-title">Top Video</h2>
@@ -40,8 +11,8 @@ function TopVideo() {
             <h2>Top Videos</h2>
             <i className="fas fa-random"></i>
           </div>
-          {details.map((el, index) => (
-            <VideoDetails details={el} key={index} />
+          {videoDetails.map((el, index) => (
+            <VideoDetails title={el.title} minute={el.minute} key={index} />
           ))}
         </section>
         <section>
@@ -57,6 +28,4 @@ function TopVideo() {
       </div>
     </div>
   );
-}
-
-export default TopVideo;
+};

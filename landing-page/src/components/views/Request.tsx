@@ -1,4 +1,4 @@
-function Request() {
+export const Request = () => {
   return (
     <div className="before-finale" id="request">
       <section className="discount">
@@ -24,8 +24,8 @@ function Request() {
           <textarea
             name=""
             id=""
-            cols="30"
-            rows="10"
+            cols={30}
+            rows={10}
             placeholder="Tell Us About Your Needs"
           ></textarea>
           <br />
@@ -34,6 +34,4 @@ function Request() {
       </section>
     </div>
   );
-}
-
-export default Request;
+};

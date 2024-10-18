@@ -1,4 +1,22 @@
-function LatestEvents() {
+export const LatestEvents = () => {
+  const counters = [
+    {
+      num: 24,
+      time: "Days",
+    },
+    {
+      num: 23,
+      time: "Hours",
+    },
+    {
+      num: 58,
+      time: "Minutes",
+    },
+    {
+      num: 46,
+      time: "Seconds",
+    },
+  ];
   return (
     <div className="events" id="events">
       <div className="dots dots-down"></div>
@@ -10,38 +28,18 @@ function LatestEvents() {
         </div>
         <div className="counter">
           <div className="add">
-            <div className="con">
-              <h3>
-                0-
-                <br />
-                24
-              </h3>
-              <p>Days</p>
-            </div>
-            <div className="con">
-              <h3>
-                0-
-                <br />
-                23
-              </h3>
-              <p>Hours</p>
-            </div>
-            <div className="con">
-              <h3>
-                0-
-                <br />
-                58
-              </h3>
-              <p>Minutes</p>
-            </div>
-            <div className="con">
-              <h3>
-                0-
-                <br />
-                46
-              </h3>
-              <p>Seconds</p>
-            </div>
+            {counters.map((el) => {
+              return (
+                <div className="con">
+                  <h3>
+                    0 :
+                    <br />
+                    {el.num}
+                  </h3>
+                  <p>{el.time}</p>
+                </div>
+              );
+            })}
           </div>
           <div className="text">
             <h3>Tech Masters Event 2021</h3>
@@ -59,6 +57,4 @@ function LatestEvents() {
       </div>
     </div>
   );
-}
-
-export default LatestEvents;
+};

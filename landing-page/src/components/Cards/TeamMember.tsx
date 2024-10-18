@@ -1,4 +1,6 @@
-function TeamMember({ teamMember }) {
+import { TeamMember } from "../../types";
+
+export const TeamMemberCard = ({ ...teamMember }: TeamMember) => {
   return (
     <div className="box">
       <div className="data">
@@ -18,6 +20,4 @@ function TeamMember({ teamMember }) {
       </div>
     </div>
   );
-}
-
-export default TeamMember;
+};
