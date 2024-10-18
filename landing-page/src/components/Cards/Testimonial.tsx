@@ -1,4 +1,5 @@
 import { Testimonial } from "../../types";
+import { motion } from "framer-motion";
 
 export const TestimonialCard = ({
   avatar,
@@ -8,7 +9,12 @@ export const TestimonialCard = ({
   body,
 }: Testimonial) => {
   return (
-    <div className="box">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="box"
+    >
       <img src={avatar} alt="" />
       <h3>{name}</h3>
       <span className="title">{career}</span>
@@ -19,6 +25,6 @@ export const TestimonialCard = ({
         <i className="far fa-star"></i>
       </div>
       <p>{body}</p>
-    </div>
+    </motion.div>
   );
 };

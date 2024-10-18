@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const LatestEvents = () => {
   const counters = [
     {
@@ -19,13 +21,23 @@ export const LatestEvents = () => {
   ];
   return (
     <div className="events" id="events">
-      <div className="dots dots-down"></div>
+      <div className="dots dots-down" style={{ perspective: "reverse" }}></div>
       <div className="dots dots-up"></div>
       <h2 className="main-title">Latest Events</h2>
       <div className="container">
-        <div className="ph">
+        <motion.div
+          initial={{ rotate: 0 }}
+          whileInView={{ rotate: 360 }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+            repeatDelay: 1,
+          }}
+          className="ph"
+        >
           <img src="images/events.png" alt="" />
-        </div>
+        </motion.div>
         <div className="counter">
           <div className="add">
             {counters.map((el) => {
@@ -41,19 +53,43 @@ export const LatestEvents = () => {
               );
             })}
           </div>
-          <div className="text">
+          <motion.div
+            initial={{ opacity: 0, x: 200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text"
+          >
             <h3>Tech Masters Event 2021</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero
               tenetur doloremque iusto ut adipisci quam ratione aliquam
               excepturi nulla in harum, veritatis porro
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="form">
-        <input type="text" placeholder="Enter Your Email" />
-        <a href="#">Subscribe</a>
+        <motion.input
+          initial={{ scaleX: 1 }}
+          whileFocus={{ scaleX: [1.1] }}
+          transition={{
+            duration: 0.5,
+          }}
+          type="text"
+          placeholder="Enter Your Email"
+        />
+        <motion.a
+          initial={{ scale: 1 }}
+          whileHover={{ scale: [1, 1.1] }}
+          transition={{
+            duration: 0.4,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+          href="#"
+        >
+          Subscribe
+        </motion.a>
       </div>
     </div>
   );

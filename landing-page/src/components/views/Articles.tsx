@@ -1,10 +1,20 @@
 import { ArticleCard } from "../Cards/Article";
 import { articles } from "../../constants";
+import { motion } from "framer-motion";
 
 export const Articles = () => {
   return (
     <div className="article" id="article">
-      <h2 className="main-title">Article</h2>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+        }}
+        className="main-title"
+      >
+        Article
+      </motion.h2>
       <div className="container">
         {articles.map((article, index) => (
           <ArticleCard

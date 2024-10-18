@@ -1,5 +1,6 @@
 import { OurWork } from "../Cards/OurWork";
 import { ourWorks } from "../../constants";
+import { motion } from "framer-motion";
 
 export const OurWorks = () => {
   return (
@@ -7,7 +8,13 @@ export const OurWorks = () => {
       <h2 className="main-title">How It Works ?</h2>
       <div className="container">
         <div className="imag">
-          <img src="images/work-steps.png" alt="" />
+          <motion.img
+            initial={{ opacity: 0, x: -300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, when: "afterChildren" }}
+            src="images/work-steps.png"
+            alt=""
+          />
         </div>
         <div className="boxs">
           {ourWorks.map((el, index) => (

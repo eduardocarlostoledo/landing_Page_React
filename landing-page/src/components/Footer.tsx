@@ -1,13 +1,31 @@
 import { contactUs } from "../constants";
+import { motion } from "framer-motion";
 
 const icons = ["facebook", "twitter", "youtube"];
 const numbers = [1, 2, 3, 4, 5];
-
+const footerVariant = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+  },
+  transition: {
+    duration: 1,
+  },
+};
 export const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div className="box one">
+        <motion.div
+          initial={footerVariant.hidden}
+          whileInView={footerVariant.visible}
+          transition={footerVariant.transition}
+          className="box one"
+        >
           <h2>Golden</h2>
           <div className="links">
             {icons.map((icon, index) => (
@@ -20,8 +38,13 @@ export const Footer = () => {
               Temporibus nulla rem, dignissimos iste aspernatur
             </p>
           </div>
-        </div>
-        <div className="box two">
+        </motion.div>
+        <motion.div
+          initial={footerVariant.hidden}
+          whileInView={footerVariant.visible}
+          transition={footerVariant.transition}
+          className="box two"
+        >
           <div className="link">
             {numbers.map((link, index) => (
               <div className="link" key={index}>
@@ -30,8 +53,13 @@ export const Footer = () => {
               </div>
             ))}
           </div>
-        </div>
-        <div className="box three">
+        </motion.div>
+        <motion.div
+          initial={footerVariant.hidden}
+          whileInView={footerVariant.visible}
+          transition={footerVariant.transition}
+          className="box three"
+        >
           {contactUs.map((el) => {
             return (
               <div className="text">
@@ -49,8 +77,13 @@ export const Footer = () => {
             <p>+72459716506</p>
             <p>956425374</p>
           </div> */}
-        </div>
-        <div className="box four">
+        </motion.div>
+        <motion.div
+          initial={footerVariant.hidden}
+          whileInView={footerVariant.visible}
+          transition={footerVariant.transition}
+          className="box four"
+        >
           <div className="gary">
             <img src="images/gallery-01.png" alt="" />
             <img src="images/gallery-02.png" alt="" />
@@ -59,11 +92,17 @@ export const Footer = () => {
             <img src="images/gallery-05.jpg" alt="" />
             <img src="images/gallery-06.png" alt="" />
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="finaleee">
         <hr />
-        <p>Made With By Golden</p>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Developed By Golden
+        </motion.p>
       </div>
     </footer>
   );

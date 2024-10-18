@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { Plan } from "../../types";
+
 export const PlanCard = ({
   typeSupport,
   icon,
@@ -7,7 +9,12 @@ export const PlanCard = ({
   details,
 }: Plan) => {
   return (
-    <div className="card">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="card"
+    >
       <h2>{typeSupport}</h2>
       <img src={icon} alt="" />
       <h3>${price}</h3>
@@ -20,6 +27,6 @@ export const PlanCard = ({
         <li>{typeSupport} Support</li>
       </ul>
       <a href="#">Choose Plan</a>
-    </div>
+    </motion.div>
   );
 };

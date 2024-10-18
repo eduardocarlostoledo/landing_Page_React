@@ -1,9 +1,16 @@
+import { motion } from "framer-motion";
+
 type featureTitle = {
   title: string;
 };
 export const Feature = ({ title }: featureTitle) => {
   return (
-    <div className={`box ${title.toLowerCase()}`}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={`box ${title.toLowerCase()}`}
+    >
       <div className="img-holder">
         <img src="images/features-01.jpg" alt="" />
       </div>
@@ -13,6 +20,6 @@ export const Feature = ({ title }: featureTitle) => {
         veniam eligendi minima
       </p>
       <a href="#">More</a>
-    </div>
+    </motion.div>
   );
 };

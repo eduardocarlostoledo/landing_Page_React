@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type Skill = {
   title: string;
   level: string;
@@ -5,13 +7,15 @@ type Skill = {
 
 export const Progress = ({ title, level }: Skill) => {
   return (
-    <div className="skill">
+    <motion.div className="skill">
       <h3>
         {title} <span className="num">{level}</span>
       </h3>
       <div className="the-progres">
-        <span style={{ width: level }}> </span>
+        <motion.span initial={{ width: 0 }} whileInView={{ width: level }}>
+          {" "}
+        </motion.span>
       </div>
-    </div>
+    </motion.div>
   );
 };

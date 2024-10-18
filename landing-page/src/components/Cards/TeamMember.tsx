@@ -1,8 +1,14 @@
 import { TeamMember } from "../../types";
+import { motion } from "framer-motion";
 
 export const TeamMemberCard = ({ ...teamMember }: TeamMember) => {
   return (
-    <div className="box">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="box"
+    >
       <div className="data">
         <div className="pho">
           <img src={teamMember.avatar} alt="" />
@@ -18,6 +24,6 @@ export const TeamMemberCard = ({ ...teamMember }: TeamMember) => {
           <p>{teamMember.body}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
