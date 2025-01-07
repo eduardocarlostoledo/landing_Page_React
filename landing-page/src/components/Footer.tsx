@@ -26,7 +26,7 @@ export const Footer = () => {
           transition={footerVariant.transition}
           className="box one"
         >
-          <h2>Golden</h2>
+          <h2>Toledo Consultora</h2>
           <div className="links">
             {icons.map((icon, index) => (
               <i className={`fab fa-${icon}`} key={index}></i>
@@ -101,7 +101,7 @@ export const Footer = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          Developed By Golden
+          Developed By Toledo Consultora
         </motion.p>
       </div>
     </footer>

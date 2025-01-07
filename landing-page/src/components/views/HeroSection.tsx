@@ -15,10 +15,12 @@ export const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="text"
         >
-          <h1>Welcome, To Golden Site</h1>
+          <h1>Welcome, To Toledo Consultora Site</h1>
           <p>
-            Here Iam gonna share everything about my life. Books Iam reading,
-            Games Iam Playing, Stories and Events
+            Aquí puedes compartir todo acerca de tu negocio. Más abajo puedes agregar
+            Artículos de interés para tus clientes, eventos, promociones,
+            testimonios, features & prices.
+          
           </p>
         </motion.div>
         <motion.div
